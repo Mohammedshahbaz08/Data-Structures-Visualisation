@@ -4,7 +4,8 @@ import { Grid, Stack, Divider, Paper, TextField, Button, Card, CardMedia} from '
 import { makeStyles, styled } from '@mui/styles';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { createMuiTheme, ThemeProvider } from '@mui/material';
-import stackVid from '../images/AnimatedPUSHfun.mp4';
+import stackVid from '../images/PUSHAnimate.mp4';
+import stackVid2 from '../images/POPAnimate.mp4';
 
 const theme =  createMuiTheme({
     palette:{
@@ -192,15 +193,18 @@ const Stacks = ()=>{
         <div>
             <ThemeProvider theme={theme}>
                 <Grid container spacing={1}>
-                    <Grid item xs={12}>
-                        <video autoPlay height="300px" width="500px" controls loop>
+                    <Grid item xs={6}>
+                        <video autoPlay height="300px" width="100%" controls loop>
                             <source src={stackVid} type="video/mp4"></source>
                         </video>
                     </Grid>
-                    <Grid>
-                        <h1>ANIMATION II</h1>
+                    <Grid item xs={6}>
+                        <video autoPlay height="300px" width="100%" controls loop>
+                            <source src={stackVid2} type="video/mp4"></source>
+                        </video>
                     </Grid>
-                  <Grid item xs={6}>
+                  <Grid item xs={6} className='leftpadding'>
+                      <div >
                      <Grid  direction='row' className='mainDiv' container >
                         <Grid textAlign='left' className='inputClass'>
                            <Stack direction="row" spacing={3}>
@@ -215,13 +219,14 @@ const Stacks = ()=>{
                           <Grid textAlign='left' className='inputClass'>
                              <Stack spacing={1.5}>
                                  <TextField variant='outlined' className={classes.textFeild} id='inputId' label='Enter value' size='small' type='number' error={invalidInput} onChange={pushInputValue}> </TextField>
-                                 <Button variant='contained' id='createId' onClick={pushInput}>PUSH</Button>
+                                 <Button variant='contained' id='createId' className='homePage' onClick={pushInput}>PUSH</Button>
                                  <Button variant='contained' id='createId' onClick={popFunction}>POP</Button>
                                  <Button variant='contained' id='createId' onClick={peekFunction}>PEEK</Button>
                                  <Button variant='contained' id='createId' onClick={emptyFunction}>Empty</Button>
                               </Stack>
                           </Grid>
                       </Grid>
+                      </div>
                   </Grid>
                   <CreateStack/>
                 </Grid>

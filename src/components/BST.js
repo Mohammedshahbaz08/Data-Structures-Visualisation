@@ -4,9 +4,7 @@ import { Grid, Stack, Divider, Paper, TextField, Button, styled } from '@mui/mat
  import { createMuiTheme, ThemeProvider,} from '@mui/material';
 import { BinarySearchTree, useTree } from 'react-tree-vis';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
-// import AnimatedBST from '../images/AnimatedBST.mp4';
-// import BstAlgo from '../images/BstAlgo'
-   //import AlertNotify from './Alert';
+import BSTVid from '../images/BSTAnimate.mp4';
 const theme =  createMuiTheme({
   palette:{
       primary:{
@@ -90,14 +88,10 @@ const deletedata=()=>{
      <>
      <div>
      <ThemeProvider theme={theme}>
-     <Grid item xs={12} md={6}>\
-     <h1>Animation</h1>
-     {/* <video  controls src={AnimatedBST.mp4} />
-     <img className='BSTanimate' src={AnimatedBST  /> */}
-     </Grid>
-     <Grid item xs={12} md={6}>
-     <h1>Animation</h1>
-     {/* <video  controls src={AnimatedBST.mp4} /> */}
+     <Grid item xs={12}>\
+          <video autoPlay height="300px" width="100%" controls loop>
+             <source src={BSTVid} type="video/mp4"></source>
+          </video>
      </Grid>
      <Grid container>
         <Grid item xs={12} md={6}>

@@ -4,6 +4,7 @@ import { Grid, Stack, Divider, Paper, TextField, Button, Card} from '@mui/materi
 import { makeStyles, styled } from '@mui/styles';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { createMuiTheme, ThemeProvider } from '@mui/material';
+import stackVid2 from '../images/20220220_1440p.mp4';
 
 
 const theme =  createMuiTheme({
@@ -193,11 +194,10 @@ const Queues = ()=>{
             <ThemeProvider theme={theme}>
                 <Grid container spacing={1}>
                 <Grid item xs={12}>
-                        <h1>ANIMATIO I</h1>
-                    </Grid>
-                    <Grid>
-                        <h1>ANIMATION II</h1>
-                    </Grid>
+                        <video autoPlay height="300px" width="100%" controls loop>
+                            <source src={stackVid2} type="video/mp4"></source>
+                        </video>
+                </Grid>
                   <Grid item xs={6}>                     
                      <Grid  direction='row' className='mainDiv' container >
                         <Grid textAlign='left' className='inputClass'>

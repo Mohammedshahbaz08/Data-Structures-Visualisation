@@ -4,6 +4,7 @@ import { Grid, Stack, Divider, Paper, TextField, Button, Alert, Snackbar, Typogr
 import { makeStyles, styled } from '@mui/styles';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import { createMuiTheme, ThemeProvider } from '@mui/material';
+import stackVid2 from '../images/20220215_1440p.mp4';
 import AlertNotify from './Alert';
 import { fontFamily } from '@mui/system';
 
@@ -149,10 +150,9 @@ const Array = () => {
             <ThemeProvider theme={theme}>
                 <Grid container>
                     <Grid item xs = {12}>
-                        <h1>ANIMATION I</h1>
-                    </Grid>
-                    <Grid item xs = {12}>
-                        <h1>ANIMATION II</h1>
+                       <video autoPlay height="300px" width="100%" controls loop>
+                            <source src={stackVid2} type="video/mp4"></source>
+                        </video>
                     </Grid>
                     <Grid item xs={6} md={6}>
                         <Grid container direction='column'>
